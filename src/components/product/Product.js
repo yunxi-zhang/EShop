@@ -35,7 +35,7 @@ const Product = () => {
     <div class="row">
       {
         products.map((product, index) => (
-          <div class="col-lg-6">
+          <div class="col-lg-4">
           <Card border="primary" className="text-center" >
             <Card.Header as="h3">Product-{index + 1}</Card.Header>
             <Card.Body>
