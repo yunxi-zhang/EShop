@@ -32,10 +32,11 @@ const Product = () => {
   }, []);
 
   return (
-    <div>
+    <div class="row">
       {
         products.map((product, index) => (
-          <Card border="primary" className="text-center">
+          <div class="col-lg-6">
+          <Card border="primary" className="text-center" >
             <Card.Header as="h3">Product-{index + 1}</Card.Header>
             <Card.Body>
               {caller ? (<LoadingBar />) : (
@@ -47,6 +48,7 @@ const Product = () => {
               )}
             </Card.Body>
           </Card>
+          </div>
         ))
       }
     </div>
