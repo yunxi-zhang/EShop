@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card} from 'react-bootstrap';
 import axios from 'axios';
-import ProductDetail from './ProductDetail';
+import ProductAmount from './ProductAmount';
 import ProductId from './ProductId';
 import ProductType from './ProductType';
 import LoadingBar from "../loading/Loading";
@@ -42,8 +42,8 @@ const Product = () => {
               {caller ? (<LoadingBar />) : (
                 <div>
                   <Card.Title><b>Id:</b><ProductId product={product} /></Card.Title>
-                  <Card.Title><b>Total Detail:</b><ProductDetail product={product} /></Card.Title>
                   <Card.Title><b>Type:</b><ProductType product={product} /></Card.Title>
+                  <Card.Title><b>Total Amount:</b><ProductAmount product={product} /></Card.Title>
                 </div>
               )}
             </Card.Body>
